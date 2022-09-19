@@ -54,16 +54,23 @@ body {
     grid-row: 2 / 3;
 }
 
-#footer-nav {
+#footer-nav {   
+    display: grid;
     grid-column: 2 / 3;
-    grid-row: 3 / 4; 
+    grid-row: 3 / 4;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 #settings {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     background: url(baseline_settings_black_24dp.png) no-repeat;
-    width: 60px;
-    height: 60px;
-    align-content: center;
-    margin: 50px; 
+    margin: 0 0 0 40px;
+}
+
+#popup-settings {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
 }
 
