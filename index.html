@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tictactoe</title>
-    <link rel = 'stylesheet' href = "style.css">
+    <link rel='stylesheet' href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
 </head>
 
@@ -51,24 +51,46 @@
 
         <div class='side-panel' id="left-panel">
             <h2>Player 1</h2>
-            <div class = "score">score</div>
+            <div class="score">score: </div>
+            <div class="choose-character-dropdown">
+                <button class="dropbtn1">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Character 1</a>
+                    <a href="#">Character 2</a>
+                    <a href="#">Character 3</a>
+                </div>
+            </div>
+
         </div>
+
 
 
         <div class='side-panel' id="right-panel">
             <h2>Player 2</h2>
-            <div class = "score">score</div>
+            <div class="score">score: </div>
+            <div class="choose-character-dropdown">
+                <button class="dropbtn2">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Character 1</a>
+                    <a href="#">Character 2</a>
+                    <a href="#">Character 3</a>
+                </div>
+            </div>
         </div>
 
 
         <div id='footer-nav'>
-            <button id = "settings"></button>
-            <div id = "popup-settings">hi</div>
+            <button id="settings"></button>
+            <div id="popup-settings">hi</div>
         </div>
     </div>
 
 
-<script src = "script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
