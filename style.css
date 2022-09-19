@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+}
+
+#game-board {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#left-panel.side-panel {
+    grid-column: 1 / 2 ;
+    grid-row: 2 / 3;
+}
+
+#right-panel.side-panel {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+#footer-nav {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
