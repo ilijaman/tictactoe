@@ -3,10 +3,18 @@
     border: 1px solid goldenrod;
 }
 
+body {
+    margin: 0;
+}
+
 .container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-template-columns: 1fr 400px 1fr;
+    grid-template-rows: 0.5fr 400px 0.5fr;
+    text-align: center;
+    font-family:'Silkscreen';
+    height: 100vh;
+    background-color: rgb(221, 255, 244);
 }
 
 #game-board {
@@ -18,9 +26,18 @@
     grid-gap: 10px;
 }
 
-/* #game-board div {
-  this targets all boxes 1-9
-} */
+#game-board div {
+  background-color: aquamarine;
+  border-radius: 10px;
+  
+
+}
+
+#game-board div:hover {
+    background-color: rgb(33, 188, 136);
+    border-radius: 10px;
+    
+}
 
 #header {
     grid-column: 2 / 3;
