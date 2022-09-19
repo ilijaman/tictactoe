@@ -29,14 +29,14 @@ body {
 #game-board div {
     background-color: aquamarine;
     border-radius: 10px;
-
+    box-shadow: 0 0 0 2px;
+    color:rgb(7, 113, 79)
 
 }
 
 #game-board div:hover {
     background-color: rgb(33, 188, 136);
     border-radius: 10px;
-
 }
 
 #header {
@@ -47,12 +47,48 @@ body {
 #left-panel.side-panel {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#left-panel.side-panel h2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#left-panel.side-panel .score {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#left-panel.side-panel .choose-character-dropdown {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
 }
 
 #right-panel.side-panel {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
+
+#right-panel.side-panel h2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#right-panel.side-panel .score {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+#right-panel.side-panel .choose-character-dropdown {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
 
 #footer-nav {
     display: grid;
@@ -78,10 +114,26 @@ body {
 
 .dropbtn1 {
     float: left;
+    font-size: 16px;
     overflow: hidden;
+    border: none;
+    color: rgb(15, 106, 76);
+    font-family: 'Silkscreen';
+    background-color: transparent
 }
 
 .dropbtn2 {
     float: right;
+    font-size: 16px;
     overflow: hidden;
+    border: none;
+    color: rgb(15, 106, 76);
+    font-family: 'Silkscreen';
+    background-color: transparent
 }
+
+/* .dropdown-content .char-list {
+    width: 100px;
+    height: 300px;
+} */
+
