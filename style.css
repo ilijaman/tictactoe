@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border: 1px solid goldenrod;
 }
 
 .container {
@@ -9,9 +10,17 @@
 }
 
 #game-board {
+    display: grid;  
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 2 / 3; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
 }
+
+/* #game-board div {
+  this targets all boxes 1-9
+} */
 
 #header {
     grid-column: 2 / 3;
