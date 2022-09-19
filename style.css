@@ -56,5 +56,14 @@ body {
 
 #footer-nav {
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-row: 3 / 4; 
 }
+
+#settings {
+    background: url(baseline_settings_black_24dp.png) no-repeat;
+    width: 60px;
+    height: 60px;
+    align-content: center;
+    margin: 50px; 
+}
+
