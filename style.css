@@ -30,12 +30,12 @@ body {
     background-color: aquamarine;
     border-radius: 10px;
     box-shadow: 0 0 0 2px;
-    color:rgb(7, 113, 79)
-
+    color:rgb(7, 113, 79);
+    font-size: 60px;
 }
 
 #game-board div:hover {
-    background-color: rgb(33, 188, 136);
+    background-color: rgb(17, 168, 117);
     border-radius: 10px;
 }
 
@@ -141,6 +141,20 @@ body {
     background: url(homer-for-cell.png);
     object-fit: contain;
 }
+#popup-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(8, 56, 40, .9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color:rgb(33, 188, 136);
+    font-size: 5rem; 
+    font-family: 'Silkscreen';
+} 
 
 /* .winning-message {
     position: fixed;

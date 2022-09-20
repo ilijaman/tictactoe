@@ -3,15 +3,15 @@
 const cells = document.querySelectorAll('.cell')
 const restartButton = document.querySelector('#restart')
 const board = document.querySelector('#game-board')
+const popupScreen = document.querySelector('#popup-screen')
 
 
 //declaring initial variables
 // let currentPlayer = playerX
 let currentPlayer = 'X'
-let p1 = []
-let p2 = []
 let xScore = 0
 let oScore = 0
+// 
 
 
 // const bart = document.createElement('img')
@@ -43,52 +43,59 @@ board.addEventListener('click', (event) => {
         alert('This spot is taken up')
     } else if (currentPlayer === 'X') {
         event.target.textContent = 'X'
-        checkForWinner()
+        // event.target.style.backgroundImage = url("dsdsds")
         currentPlayer = 'O'
+         checkForWinner()
+         endGame()
     } else if (currentPlayer === 'O') {
         event.target.textContent = 'O' 
-        checkForWinner()
         currentPlayer = 'X'
+        checkForWinner()
+        endGame()
     }
 })
 
 
 const checkForWinner = () => {
 
+    let winner = 'null'
+
     if (cells[0].innerText === 'X' && cells[1].innerText === 'X' && cells[2].innerText === 'X') {
-        alert('X wins')
+        winner = 'X'
     } else if (cells[0].innerText === 'O' && cells[1].innerText === 'O' && cells[2].innerText === 'O') {
-        alert('O wins')
+        winner = 'O'
     } else if (cells[3].innerText === 'X' && cells[4].innerText === 'X' && cells[5].innerText === 'X') {
-        alert('X wins')
+        winner = 'X'
     } else if (cells[3].innerText === 'O' && cells[4].innerText === 'O' && cells[5].innerText === 'O') {
-        alert ('O wins')
+        winner = 'O'
     } else if (cells[6].innerText === 'X' && cells[7].innerText === 'X' && cells[8].innerText === 'X') {
-        alert ('X wins')
+        winner = 'X'
     } else if (cells[6].innerText === 'O' && cells[7].innerText === 'O' && cells[8].innerText === 'O') {
-        alert ('O wins')
+        winner = 'O'
     } else if (cells[0].innerText === 'X' && cells[3].innerText === 'X' && cells[6].innerText === 'X') {
-        alert ('X wins')
+        winner = 'X'
     } else if (cells[0].innerText === 'O' && cells[3].innerText === 'O' && cells[6].innerText === 'O') {
-        alert ('O wins')
+        winner = 'O'
     } else if (cells[1].innerText === 'X' && cells[4].innerText === 'X' && cells[7].innerText === 'X') {
-        alert ('X wins')
+        winner = 'X'
     } else if (cells[1].innerText === 'O' && cells[4].innerText === 'O' && cells[7].innerText === 'O') {
-        alert ('O wins')
+        winner = 'O'
     } else if (cells[2].innerText === 'X' && cells[5].innerText === 'X' && cells[8].innerText === 'X') {
-        alert ('X wins')
+        winner = 'X'
     } else if (cells[2].innerText === 'O' && cells[5].innerText === 'O' && cells[8].innerText === 'O') {
-        alert ('O wins')
+        winner = 'O'
     } else if (cells[0].innerText === 'X' && cells[4].innerText === 'X' && cells[8].innerText === 'X') {
-        alert ('X wins')
+        winner = 'X'
     } else if (cells[0].innerText === 'O' && cells[4].innerText === 'O' && cells[8].innerText === 'O') {
-        alert ('O wins')
+        winner = 'O'
     } else if (cells[2].innerText === 'X' && cells[4].innerText === 'X' && cells[6].innerText === 'X') {
-        alert ('X wins')
+        winner = 'X'
     } else if (cells[2].innerText === 'O' && cells[4].innerText === 'O' && cells[6].innerText === 'O') {
-        alert ('O wins')
+        winner = 'O'
     }
+    return winner
 }
+
 
 restartButton.addEventListener('click', () => {
     restartGame()
@@ -97,5 +104,36 @@ restartButton.addEventListener('click', () => {
 const restartGame = () => {
     for (let cell of cells) {
         cell.innerText = ''
+        // cell.backgroundImage - get rid of bart/homer
     }
 }
+
+const endGame = () => {
+    console.log(cells[4])
+    if (cells[0].innerText !== '' && cells[1].innerText !== '' && cells[2].innerText !== '' && cells[3].innerText !== '' && cells[4].innerText !== '' && cells[5].innerText !== '' && cells[6].innerText !== '' && cells[7].innerText !== '' && cells[8].innerText !== ''){
+        popupScreen.innerText = 'Draw'
+        popupScreen.style.display = 'flex'
+    } else if (checkForWinner() === 'X') {
+        popupScreen.innerText = 'X Wins'
+        popupScreen.style.display = 'flex'
+        // xScore += 1 NOT FINISHED
+    } else if (checkForWinner() === 'O') {
+        popupScreen.innerText = 'O Wins'
+        popupScreen.style.display = 'flex'
+        // oScore += 1 NOT FINISHED
+    }
+}
+
+popupScreen.addEventListener('click', () => {
+    popupScreen.style.display = 'none'
+})
+// click to remove the screen-popup at endgame.
+
+
+
+
+// const scoreBoard = () => {
+//     //if player x wins add one to scoreboard for player X, vice versa 
+// }
+
+// drawScreen.innerHTML += '<img src = "bart-for-cell.png">'
