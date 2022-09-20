@@ -35,14 +35,6 @@ const winningConditions = [
 ]
 
 
-// everytime a cell is clicked - add X's 
-// if player one is X and two is O, first tile X, need to make sure the following click is an O and keeps switching 
-// make sure you can't click again on a cell that already has X/O
-
-// for (let cell of cells) {
-//     cell.addEventListener('click', 
-// }
-
 board.addEventListener('click', (event) => {
     if (event.target === board) {
         return
@@ -58,28 +50,11 @@ board.addEventListener('click', (event) => {
         checkForWinner()
         currentPlayer = 'X'
     }
-
-    //     const logOfMoves = Number(event.target.dataset.index)
-    //     p1.push(logOfMoves)
-    //     console.log(logOfMoves)
-    //     //want to assign each click - to log the moves, into the array of p1/p2
-    // }
 })
 
 
-// const checkForWinner = (index) => {
-//     if (p1 === winningConditions[0]|| p1 === winningConditions[1] || p1 === winningConditions[2] || p1 === winningConditions[3] || p1 === winningConditions[4] || p1 === winningConditions[5] || p1 === winningConditions[6]) {
-//         return // p1 wins
-//     } else if {
-//         (p2 === winningConditions[0]|| p2 === winningConditions[1] || p2 === winningConditions[2] || p2 === winningConditions[3] || p2 === winningConditions[4] || p2 === winningConditions[5] || p2 === winningConditions[6]) {
-//         return // p2 wins 
-//     } else if {
-//         //each div cell is clicked/marked then game needs to break and show 'draw'
-//     }
-// }
-
 const checkForWinner = () => {
-    console.log(cells[0], cells[1], cells[2])
+
     if (cells[0].innerText === 'X' && cells[1].innerText === 'X' && cells[2].innerText === 'X') {
         alert('X wins')
     } else if (cells[0].innerText === 'O' && cells[1].innerText === 'O' && cells[2].innerText === 'O') {
@@ -112,5 +87,15 @@ const checkForWinner = () => {
         alert ('X wins')
     } else if (cells[2].innerText === 'O' && cells[4].innerText === 'O' && cells[6].innerText === 'O') {
         alert ('O wins')
+    }
+}
+
+restartButton.addEventListener('click', () => {
+    restartGame()
+})
+
+const restartGame = () => {
+    for (let cell of cells) {
+        cell.innerText = ''
     }
 }
