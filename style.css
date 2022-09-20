@@ -103,6 +103,7 @@ body {
     grid-row: 2 / 3;
     background: url(baseline_restart_alt_black_24dp.png) no-repeat;
     margin: 0 0 0 40px;
+    border: 0;
 }
 
 /* #popup-settings {
@@ -132,13 +133,12 @@ body {
     background-color: transparent
 }
 
-#bart-token {
-    background: url(69-690313_bart-simpsons-png-bart-simpson-ass.png);
+.bart-token {
     object-fit: contain;
 }
 
 #homer-token {
-    background: url(144-1448110_homer-simpson-png-transparent-png.png);
+    background: url(homer-for-cell.png);
     object-fit: contain;
 }
 
