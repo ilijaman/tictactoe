@@ -4,23 +4,13 @@ const cells = document.querySelectorAll('.cell')
 const restartButton = document.querySelector('#restart')
 const board = document.querySelector('#game-board')
 const popupScreen = document.querySelector('#popup-screen')
-
+const homerToken = document.querySelector('#homer-token')
 
 //declaring initial variables
-// let currentPlayer = playerX
+
 let currentPlayer = 'X'
 let xScore = 0
 let oScore = 0
-// 
-
-
-// const bart = document.createElement('img')
-// bart.src = 'bart-for-cell.png'
-// topLeftCell.appendChild(bart)
-// bart.className = 'bart-token'
-// const homerToken = document.querySelector('#homer-token')
-// console.log(bart)
-// console.log(topLeftCell)
 
 
 const winningConditions = [
@@ -127,6 +117,7 @@ const endGame = () => {
 popupScreen.addEventListener('click', () => {
     popupScreen.style.display = 'none'
 })
+
 // click to remove the screen-popup at endgame.
 
 
