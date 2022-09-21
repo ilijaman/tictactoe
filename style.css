@@ -5,24 +5,44 @@
 body {
     margin: 0;
 }
-.dark {
-    background-color: black;
+
+
+
+/* Donuts theme styling ================================================================================================================================*/
+ 
+
+
+.donuts #game-board div {
+    background-color: rgb(255, 187, 238);
+    box-shadow: 0 0 0 2px;
+    color:rgb(199, 55, 179);
 }
 
-.light {
-    background-color: white;
+.donuts #game-board div:hover {
+    background-color: rgb(254, 120, 221);
+} 
+.donuts .container {
+    background-color: rgb(183, 255, 248)
 }
 
-.light #game-board div {
-    background-color: blueviolet;
+.donuts .dropbtn1 {
+    color: hotpink
 }
 
-.dark #game-board div {
-    background-color: brown;
+.donuts .dropbtn2 {
+    color: hotpink
 }
-.dark .container {
-    background-color: beige
+
+.donuts #popup-screen {
+    background-color: rgba(221, 88, 216, 0.85);
+    color: cyan
 }
+
+
+
+/* Container styling for middle of the document ===================================================================================================================*/
+
+
 
 .container {
     display: grid;
@@ -31,7 +51,7 @@ body {
     text-align: center;
     font-family: 'Silkscreen';
     height: 100vh;
-    background-color: rgb(221, 255, 244);
+    background-color: rgb(190, 244, 227);
 }
 
 #game-board {
@@ -60,6 +80,13 @@ body {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
+
+
+
+
+/*Left and right player panels ======================================================================================================================================================*/
+
+
 
 #left-panel.side-panel {
     grid-column: 1 / 2;
@@ -107,6 +134,11 @@ body {
 }
 
 
+
+/* Restart button =====================================================================================================================================================*/
+
+
+
 #footer-reset {
     display: grid;
     grid-column: 2 / 3;
@@ -129,10 +161,33 @@ body {
     /*  https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp --> how to display dropdown
 */
 
+
+
+
+/*Brush - Theme button icon =============================================================================================================================*/
+
+
+
+
 #theme {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+    max-width: 30px;
+    max-height: 30px;
+    background: url(brush_FILL0_wght400_GRAD0_opsz48.png);
+    background-size: 30px;
+    font-size: 0px;
+    border: 0px;
+    margin: 10px 0px 0px 515px;
 }
+
+
+
+
+/*Choose a character button =============================================================================================================================================*/
+
+
+
 
 .dropbtn1 {
     float: left;
@@ -162,6 +217,14 @@ body {
     background: url(homer-for-cell.png);
     object-fit: contain;
 } */
+
+
+
+/* Display pop up - end of game screen ==================================================================================================================================*/
+
+
+
+
 #popup-screen {
     position: fixed;
     top: 0;

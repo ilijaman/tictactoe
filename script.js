@@ -1,4 +1,5 @@
-// selecting what is needs to be targetted 
+// Selecting what needs to be targetted ---------------------------------------------------------------------------------------------------------------------
+
 
 const cells = document.querySelectorAll('.cell')
 const restartButton = document.querySelector('#restart')
@@ -7,13 +8,15 @@ const popupScreen = document.querySelector('#popup-screen')
 const homerToken = document.querySelector('#homer-token')
 const scoreLeft = document.querySelector('#xScore')
 const scoreRight = document.querySelector('#oScore')
+const themeButton = document.querySelector('#theme')
 
-//declaring initial variables
+
+// Declaring initial variables + Establishing win condition -------------------------------------------------------------------------------------------
+
 
 let currentPlayer = 'X'
 let xScore = 0
 let oScore = 0
-
 
 const winningConditions = [
     [0, 1, 2],
@@ -27,6 +30,11 @@ const winningConditions = [
 ]
 
 
+
+// Adding a click event listener to the cells ---------------------------------------------------------------------------------------------------------------
+
+
+
 board.addEventListener('click', (event) => {
     if (event.target === board) {
         return
@@ -38,15 +46,19 @@ board.addEventListener('click', (event) => {
         event.target.innerText = 'X'
         // event.target.style.backgroundImage = url("bart-for-cell.png")
         currentPlayer = 'O'
-        //  checkForWinner()
          endGame()
     } else if (currentPlayer === 'O') {
         event.target.innerText = 'O' 
         currentPlayer = 'X'
-        // checkForWinner()
         endGame()
     }
 })
+
+
+
+
+// If any win conditions are met, a winner will be declared ----------------------------------------------------------------------------------------------------------
+
 
 
 const checkForWinner = () => {
@@ -90,10 +102,15 @@ const checkForWinner = () => {
 }
 
 
+
+
+// Restart function -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 restartButton.addEventListener('click', () => {
     restartGame()
 })
-
 
 const restartGame = () => {
     for (let cell of cells) {
@@ -102,6 +119,11 @@ const restartGame = () => {
         // cell.backgroundImage - get rid of bart/homer
     }
 }
+
+
+
+// endgame popup screens + score functionality -----------------------------------------------------------------------------------------------------------------
+
 
 const endGame = () => {
     console.log(cells[4])
@@ -126,11 +148,19 @@ const endGame = () => {
 }
     
 
-const btn = document.querySelector('#theme')
-btn.addEventListener('click', () => {
-    document.body.classList.add('dark')
+
+
+//theme toggle button for diff css styles -----------------------------------------------------------------------------------------------------------------
+
+
+
+themeButton.addEventListener('click', () => {
+    document.body.classList.toggle('donuts')
 })
 
+
+
+// click to exit the popup screen at end of game------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -138,7 +168,6 @@ popupScreen.addEventListener('click', () => {
     popupScreen.style.display = 'none'
 })
 
-// click to remove the screen-popup at endgame.
 
 
 
