@@ -48,6 +48,29 @@ body {
     color: cyan
 } 
 
+.donuts .player-left {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-image: url("imgs/homer2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin: 0 0 20px 0;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.donuts .player-right {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-image: url("imgs/wiggum2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin: 0 0 20px 0;
+    max-width: 400px;
+    max-height: 300px;
+}
 
 
 
@@ -57,11 +80,11 @@ body {
 
 
 .duff .playerX {
-    background-image: url("moe.png");
+    background-image: url("imgs/moe.png");
 }
 
 .duff .playerO {
-    background-image: url("barney.png");
+    background-image: url("imgs/barney.png");
 }
 
 .duff #game-board div {
@@ -90,7 +113,29 @@ body {
     color: silver
 }
 
+.duff .player-left {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-image: url("imgs/barney2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin: 0 0 20px 0;
+    max-width: 400px;
+    max-height: 300px;
+}
 
+.duff .player-right {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-image: url("imgs/moe2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin: 0 0 20px 0;
+    max-width: 400px;
+    max-height: 300px;
+}
 
 
 /* Kodos theme styling =======================================================================================================================================*/
@@ -99,12 +144,12 @@ body {
 
 
 .kodos .playerX {
-    background-image: url("kang.png");
+    background-image: url("imgs/kang.png");
 
 }
 
 .kodos .playerO {
-    background-image: url("kodos.png");
+    background-image: url("imgs/kodos.png");
 }
 
 .kodos #game-board div {
@@ -132,6 +177,32 @@ body {
     background-color: rgba(98, 101, 12, 0.85);
     color: cyan;
 }
+
+.kodos .player-left {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-image: url("imgs/kang1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin: 0 0 20px 0;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.kodos .player-right {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-image: url("imgs/kodos2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin: 0 0 20px 0;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+
 
 
 
@@ -248,6 +319,7 @@ body {
 
 
 
+
 /* Restart button =====================================================================================================================================================*/
 
 
@@ -263,7 +335,7 @@ body {
 #restart {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background: url(baseline_restart_alt_black_24dp.png) no-repeat;
+    background: url(imgs/baseline_restart_alt_black_24dp.png) no-repeat;
     margin: 0 0 0 40px;
     border: 0;
 }
@@ -273,6 +345,7 @@ body {
     grid-row: 1 / 4;
     /*  https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp --> how to display dropdown
 */
+
 
 
 
@@ -287,7 +360,7 @@ body {
     grid-row: 1 / 2;
     max-width: 30px;
     max-height: 30px;
-    background: url(brush_FILL0_wght400_GRAD0_opsz48.png);
+    background: url(imgs/brush_FILL0_wght400_GRAD0_opsz48.png);
     background-size: 30px;
     font-size: 0px;
     border: 0px;
@@ -297,7 +370,9 @@ body {
 
 
 
+
 /*Choose a character button =============================================================================================================================================*/
+
 
 
 
@@ -312,6 +387,7 @@ body {
     background-color: transparent
 }
 
+
 .dropbtn2 {
     float: right;
     font-size: 16px;
@@ -321,15 +397,9 @@ body {
     font-family: 'Silkscreen';
     background-color: transparent
 }
-/* 
-.bart-token {
-    object-fit: contain;
-} */
-/* 
-#homer-token {
-    background: url(homer-for-cell.png);
-    object-fit: contain;
-} */ 
+
+
+
 
 
 
@@ -353,129 +423,4 @@ body {
     font-family: 'Silkscreen';
 } 
 
-
-
-/* TRYING TO ADD THEMES */
-
-/* #footer-nav {
-    grid-row: 3 / 4;
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-} */
-
-/* #theme-icon {
-    padding-right: 10px;
-    cursor: pointer;
-}
-
-.theme-icon:hover {
-    transform: rotate(180)
-}
-
-#theme-menu {
-    background-color: #008F9F;
-    color: #F2F2F2;
-    height: 100%;
-    top: 8%;
-    right: 0; 
-    position: absolute;
-    width: 0px; 
-    transition: width 0.7s;
-    flex-direction: column;
-    flex-wrap: wrap;
-    display: none;
-}
-
-/* #theme-header {
-    position: relative;
-    /* color: #F2F2F2; */
-    /* top: 10px;
-    left: 5px;
-    width: 100%;
-    background: none;
-    border: none;
-    text-align: left;
-    font-size: 16px;
-    height: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 20px;
-}
-
-#theme-list {
-    list-style-type: none;
-    padding-left: 0px;
-}
-
-li {
-    margin-bottom: 4px;
-    cursor: pointer;
-    padding: 5px 0px 5px 15px;
-    width: 145px;
-    position: relative;
-}
-
-li:hover {
-    filter:brightness(80%)
-}
-
-.hide {
-    display: none;
-}
-
-label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 40%;
-	height: 30px;
-	background: grey;
-	display: block;
-	border-radius: 100px;
-	position: relative;
-}
-
-label:after {
-	content: '';
-	position: absolute;
-	left: 0.1px;
-	width: 30px;
-	height: 30px;
-	background: #fff;
-	border-radius: 30px;
-	transition: 0.3s;
-}
-
-input:checked + label:after {
-	left: calc(100%);
-	transform: translateX(-100%);
-}
-
-
-.theme-show {
-    width: 160px;
-    display: flex;
-    right: 0;
-} */
-
-/* .winning-message {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(8, 56, 40, .9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:rgb(33, 188, 136);
-    font-size: 5rem; 
-    font-family: 'Silkscreen';
-} */
-
-/* .dropdown-content .char-list {
-    width: 100px;
-    height: 300px;
-} */
 

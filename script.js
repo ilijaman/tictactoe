@@ -115,6 +115,7 @@ const checkForWinner = () => {
 
 
 
+
 restartButton.addEventListener('click', () => {
     restartGame()
 })
@@ -130,12 +131,14 @@ const restartGame = () => {
 
 
 
+
 // Endgame popup screens + score functionality -----------------------------------------------------------------------------------------------------------------
 
 
 
+
 const endGame = () => {
-    console.log(cells[4])
+    
 
     if (checkForWinner() === 'X') {
         const token = document.createElement('div')
@@ -147,11 +150,14 @@ const endGame = () => {
         xScore += 1 
         scoreLeft.innerText = `Score: ${xScore}`
     } else if (checkForWinner() === 'O') {
-        popupScreen.innerText = 'O Wins'
+        const token = document.createElement('div')
+        token.className = 'playerO'
+        popupScreen.append(token)
+        popupScreen.append('Wins')
         popupScreen.style.display = 'flex'
         restartGame()
         oScore += 1 
-        scoreRight.innerText = `Score: ${xScore}`
+        scoreRight.innerText = `Score: ${oScore}`
     } else if (cells[0].innerText !== '' && cells[1].innerText !== '' && cells[2].innerText !== '' && cells[3].innerText !== '' && cells[4].innerText !== '' && cells[5].innerText !== '' && cells[6].innerText !== '' && cells[7].innerText !== '' && cells[8].innerText !== ''){
         popupScreen.innerText = 'Draw'
         popupScreen.style.display = 'flex'
@@ -192,7 +198,9 @@ themeButton.addEventListener('click', () => {
 
 
 
+
 // Click to exit the popup screen at end of game------------------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -206,4 +214,4 @@ popupScreen.addEventListener('click', () => {
 
 
 
-// drawScreen.innerHTML += '<img src = "bart-for-cell.png">'
+
