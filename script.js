@@ -15,6 +15,7 @@ const homerToken = document.querySelector('#homer-token')
 
 
 
+
 // Declaring initial variables + Establishing win condition -------------------------------------------------------------------------------------------
 
 
@@ -132,11 +133,15 @@ const restartGame = () => {
 // Endgame popup screens + score functionality -----------------------------------------------------------------------------------------------------------------
 
 
+
 const endGame = () => {
     console.log(cells[4])
 
     if (checkForWinner() === 'X') {
-        popupScreen.innerText = 'X Wins'
+        const token = document.createElement('div')
+        token.className = 'playerX'
+        popupScreen.append(token)
+        popupScreen.append('Wins')
         popupScreen.style.display = 'flex'
         restartGame()
         xScore += 1 
@@ -193,6 +198,7 @@ themeButton.addEventListener('click', () => {
 
 popupScreen.addEventListener('click', () => {
     popupScreen.style.display = 'none'
+    popupScreen.innerHTML = ''
 })
 
 
