@@ -30,7 +30,6 @@ const winningConditions = [
 ]
 
 
-
 // Adding a click event listener to the cells ---------------------------------------------------------------------------------------------------------------
 
 
@@ -122,7 +121,7 @@ const restartGame = () => {
 
 
 
-// endgame popup screens + score functionality -----------------------------------------------------------------------------------------------------------------
+// Endgame popup screens + score functionality -----------------------------------------------------------------------------------------------------------------
 
 
 const endGame = () => {
@@ -150,17 +149,37 @@ const endGame = () => {
 
 
 
-//theme toggle button for diff css styles -----------------------------------------------------------------------------------------------------------------
+// Theme toggle button for diff css styles -----------------------------------------------------------------------------------------------------------------
+
+
+const themeTypes = [
+    'duff',
+    'donuts',
+    'kodos',
+]
+
+let currentTheme = 0
 
 
 
 themeButton.addEventListener('click', () => {
-    document.body.classList.toggle('donuts')
+    if (currentTheme === 0) {
+        currentTheme = 1
+    } else if (currentTheme === 1) {
+        currentTheme = 2
+    } else if (currentTheme === 2) {
+        currentTheme = 0
+    }
+
+    let newTheme = themeTypes[currentTheme]
+    document.body.className = newTheme
+    
 })
 
 
 
-// click to exit the popup screen at end of game------------------------------------------------------------------------------------------------------------------------
+
+// Click to exit the popup screen at end of game------------------------------------------------------------------------------------------------------------------------
 
 
 
