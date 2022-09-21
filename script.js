@@ -5,6 +5,8 @@ const restartButton = document.querySelector('#restart')
 const board = document.querySelector('#game-board')
 const popupScreen = document.querySelector('#popup-screen')
 const homerToken = document.querySelector('#homer-token')
+const scoreLeft = document.querySelector('#xScore')
+const scoreRight = document.querySelector('#oScore')
 
 //declaring initial variables
 
@@ -30,17 +32,18 @@ board.addEventListener('click', (event) => {
         return
     }
     if (event.target.innerText) {
-        alert('This spot is taken up')
+        popupScreen.innerText = "This spot is taken up!"
+        popupScreen.style.display = 'flex'
     } else if (currentPlayer === 'X') {
-        event.target.textContent = 'X'
-        // event.target.style.backgroundImage = url("dsdsds")
+        event.target.innerText = 'X'
+        // event.target.style.backgroundImage = url("bart-for-cell.png")
         currentPlayer = 'O'
-         checkForWinner()
+        //  checkForWinner()
          endGame()
     } else if (currentPlayer === 'O') {
-        event.target.textContent = 'O' 
+        event.target.innerText = 'O' 
         currentPlayer = 'X'
-        checkForWinner()
+        // checkForWinner()
         endGame()
     }
 })
@@ -91,28 +94,45 @@ restartButton.addEventListener('click', () => {
     restartGame()
 })
 
+
 const restartGame = () => {
     for (let cell of cells) {
         cell.innerText = ''
+        currentPlayer = 'X'
         // cell.backgroundImage - get rid of bart/homer
     }
 }
 
 const endGame = () => {
     console.log(cells[4])
-    if (cells[0].innerText !== '' && cells[1].innerText !== '' && cells[2].innerText !== '' && cells[3].innerText !== '' && cells[4].innerText !== '' && cells[5].innerText !== '' && cells[6].innerText !== '' && cells[7].innerText !== '' && cells[8].innerText !== ''){
-        popupScreen.innerText = 'Draw'
-        popupScreen.style.display = 'flex'
-    } else if (checkForWinner() === 'X') {
+
+    if (checkForWinner() === 'X') {
         popupScreen.innerText = 'X Wins'
         popupScreen.style.display = 'flex'
-        // xScore += 1 NOT FINISHED
+        restartGame()
+        xScore += 1 
+        scoreLeft.innerText = `Score: ${xScore}`
     } else if (checkForWinner() === 'O') {
         popupScreen.innerText = 'O Wins'
         popupScreen.style.display = 'flex'
-        // oScore += 1 NOT FINISHED
-    }
+        restartGame()
+        oScore += 1 
+        scoreRight.innerText = `Score: ${xScore}`
+    } else if (cells[0].innerText !== '' && cells[1].innerText !== '' && cells[2].innerText !== '' && cells[3].innerText !== '' && cells[4].innerText !== '' && cells[5].innerText !== '' && cells[6].innerText !== '' && cells[7].innerText !== '' && cells[8].innerText !== ''){
+        popupScreen.innerText = 'Draw'
+        popupScreen.style.display = 'flex'
+        restartGame()
+    } 
 }
+    
+
+const btn = document.querySelector('#theme')
+btn.addEventListener('click', () => {
+    document.body.classList.add('dark')
+})
+
+
+
 
 popupScreen.addEventListener('click', () => {
     popupScreen.style.display = 'none'
@@ -123,8 +143,5 @@ popupScreen.addEventListener('click', () => {
 
 
 
-// const scoreBoard = () => {
-//     //if player x wins add one to scoreboard for player X, vice versa 
-// }
 
 // drawScreen.innerHTML += '<img src = "bart-for-cell.png">'
