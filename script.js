@@ -5,13 +5,18 @@ const cells = document.querySelectorAll('.cell')
 const restartButton = document.querySelector('#restart')
 const board = document.querySelector('#game-board')
 const popupScreen = document.querySelector('#popup-screen')
-const homerToken = document.querySelector('#homer-token')
+
 const scoreLeft = document.querySelector('#xScore')
 const scoreRight = document.querySelector('#oScore')
+
 const themeButton = document.querySelector('#theme')
+const bartToken = document.querySelector('#bart-token')
+const homerToken = document.querySelector('#homer-token')
+
 
 
 // Declaring initial variables + Establishing win condition -------------------------------------------------------------------------------------------
+
 
 
 let currentPlayer = 'X'
@@ -43,11 +48,13 @@ board.addEventListener('click', (event) => {
         popupScreen.style.display = 'flex'
     } else if (currentPlayer === 'X') {
         event.target.innerText = 'X'
-        // event.target.style.backgroundImage = url("bart-for-cell.png")
+        event.target.classList.add('playerX')
+        // event.target.style.backgroundImage = bartToken
         currentPlayer = 'O'
          endGame()
     } else if (currentPlayer === 'O') {
         event.target.innerText = 'O' 
+        event.target.classList.add('playerO')
         currentPlayer = 'X'
         endGame()
     }
@@ -115,7 +122,6 @@ const restartGame = () => {
     for (let cell of cells) {
         cell.innerText = ''
         currentPlayer = 'X'
-        // cell.backgroundImage - get rid of bart/homer
     }
 }
 
@@ -153,29 +159,29 @@ const endGame = () => {
 
 
 const themeTypes = [
-    'duff',
-    'donuts',
     'kodos',
+    'donuts',
+    'duff',
 ]
 
 let currentTheme = 0
 
-
-
 themeButton.addEventListener('click', () => {
-    if (currentTheme === 0) {
-        currentTheme = 1
-    } else if (currentTheme === 1) {
-        currentTheme = 2
-    } else if (currentTheme === 2) {
+    if (currentTheme >= 0) {
+        currentTheme += 1
+    }
+    
+    if (currentTheme > themeTypes.length -1) {
         currentTheme = 0
     }
 
+    restartGame()
+
     let newTheme = themeTypes[currentTheme]
     document.body.className = newTheme
+    console.log(currentTheme)
     
 })
-
 
 
 

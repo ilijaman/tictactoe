@@ -11,6 +11,13 @@ body {
 /* Donuts theme styling ================================================================================================================================*/
  
 
+.donuts .playerX {
+    background-image: url("homer.png");
+}
+
+.donuts .playerO {
+    background-image: url("wiggum.png");
+}
  
 .donuts #game-board div {
     background-color: rgb(255, 187, 238);
@@ -43,6 +50,16 @@ body {
 
 /* Duff theme styling =====================================================================================================================================*/
 
+
+
+.duff .playerX {
+    background-image: url("moe.png");
+}
+
+.duff .playerO {
+    background-image: url("barney.png");
+}
+
 .duff #game-board div {
     background-color: white;
     box-shadow: 0 0 0 2px;
@@ -71,7 +88,53 @@ body {
 
 
 
+
+
+/* Kodos theme styling =======================================================================================================================================*/
+
+
+
+.kodos .playerX {
+    background-image: url("kang.png");
+}
+
+.kodos .playerO {
+    background-image: url("kodos.png");
+}
+
+.kodos #game-board div {
+    background-color: rgb(177, 255, 249);
+    box-shadow: 0 0 0 2px;
+    color:red;
+    /* background-image: url("bart-for-cell.png") */
+}
+
+.kodos #game-board div:hover {
+    background-color: rgb(121, 223, 149);
+} 
+.kodos .container {
+    background-color: rgb(180, 185, 53);
+}
+
+.kodos .dropbtn1 {
+    color: red;
+}
+
+.kodos .dropbtn2 {
+    color: red;
+}
+
+.kodos #popup-screen {
+    background-color: rgba(98, 101, 12, 0.85);
+    color: cyan;
+}
+
+
+
+
+
 /* Container styling for middle of the document ===================================================================================================================*/
+
 
 
 
@@ -100,7 +163,11 @@ body {
     box-shadow: 0 0 0 2px;
     color: red;
     font-size: 10px;
-}
+    /* background-image: url("homer-for-cell.png");*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+} 
 
 #game-board div:hover {
     background-color: rgb(121, 223, 149);
@@ -239,15 +306,15 @@ body {
     font-family: 'Silkscreen';
     background-color: transparent
 }
-
-/* .bart-token {
+/* 
+.bart-token {
     object-fit: contain;
-}
-
+} */
+/* 
 #homer-token {
     background: url(homer-for-cell.png);
     object-fit: contain;
-} */
+} */ 
 
 
 
@@ -376,9 +443,6 @@ input:checked + label:after {
     display: flex;
     right: 0;
 } */
- */
- */
-
 
 /* .winning-message {
     position: fixed;
