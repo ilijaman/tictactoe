@@ -122,6 +122,8 @@ const restartGame = () => {
     for (let cell of cells) {
         cell.innerText = ''
         currentPlayer = 'X'
+        cell.classList.remove('playerO')
+        cell.classList.remove('playerX')
     }
 }
 
