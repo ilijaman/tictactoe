@@ -15,11 +15,11 @@ body {
 
 
 .donuts .playerX {
-    background-image: url("homer.png");
+    background-image: url("imgs/homer.png");
 }
 
 .donuts .playerO {
-    background-image: url("wiggum.png");
+    background-image: url("imgs/wiggum.png");
 }
  
 .donuts #game-board div {

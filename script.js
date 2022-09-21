@@ -50,7 +50,6 @@ board.addEventListener('click', (event) => {
     } else if (currentPlayer === 'X') {
         event.target.innerText = 'X'
         event.target.classList.add('playerX')
-        // event.target.style.backgroundImage = bartToken
         currentPlayer = 'O'
          endGame()
     } else if (currentPlayer === 'O') {
