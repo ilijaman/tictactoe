@@ -62,3 +62,4 @@ SOMETHING THAT I MIGHT ADD IN THE FUTURE
 - Ability to choose characters... which in turn would lead to the respective chosen character being displayed as the X/O token on the board, as well as on the winnings pop-up screen. 
 - AI Functionality so that you can play the game against the computer. 
 - A Nav bar in CSS.
+- SFX
