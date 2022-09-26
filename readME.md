@@ -1,5 +1,7 @@
 # Tic-Tac-Toe
 
+PLAY HERE: https://ilijaman.github.io/tictactoe/
+
 
 PROJECT GOAL: 
 
